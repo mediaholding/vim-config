@@ -331,8 +331,10 @@ let g:ycm_filetype_blacklist =
 source ~/.vim/colors.vim
 
 if has('gui_running')
-  set guifont=Inconsolata-dz\ for\ Powerline:h11
-  set transparency=5        " set transparent window
+  set guifont=Menlo\ Regular:h14
+  "set guifont=Consolas:h14
+  set linespace=5
+  "set transparency=6    " set transparent window
   set guioptions=egmrt  " hide the gui menubar
 endif
 

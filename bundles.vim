@@ -35,7 +35,7 @@ NeoBundle 'Shougo/vimproc', { 'build': {
 
 " NeoBundle 'airblade/vim-rooter'
 
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 
 let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_cache_omnifunc = 0
@@ -70,7 +70,7 @@ NeoBundleLazy 'ujihisa/unite-colorscheme', {'autoload':{'unite_sources': 'colors
 " Colors {{{
 " ==========
 
-    " NeoBundleLazy 'jpo/vim-railscasts-theme'
+    NeoBundle 'jpo/vim-railscasts-theme'
     NeoBundleLazy 'altercation/vim-colors-solarized'
     NeoBundleLazy 'mbbill/desertEx'
     NeoBundle 'tomasr/molokai'
@@ -169,21 +169,46 @@ NeoBundle 'tpope/vim-endwise'
     " lean & mean statusline for vim that's light as air
     NeoBundle 'bling/vim-airline'
 
-    let g:airline_detect_iminsert = 1
+    "let g:airline_detect_iminsert = 1
 
     " Airline theme settings
     let g:airline_powerline_fonts = 1
-    "Show buffer list
+
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
+
+    " Unicode symbols
+    let g:airline_left_sep = '»'
+    let g:airline_left_sep = '▶'
+    let g:airline_right_sep = '«'
+    let g:airline_right_sep = '◀'
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.whitespace = 'Ξ'
+
+    " Show buffer list
     let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#show_buffers = 1
-    let g:airline#extensions#tabline#buffer_nr_show = 1
-    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-    let g:airline#extensions#tabline#buffer_min_count = 2
-    "Show whitespace errors
+    "let g:airline#extensions#tabline#show_buffers = 1
+    "let g:airline#extensions#tabline#buffer_nr_show = 1
+    "let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+    "let g:airline#extensions#tabline#buffer_min_count = 2
+
+    " Show whitespace errors
     let g:airline#extensions#whitespace#enabled = 1
+
     " Tmux
-    let g:airline#extensions#tmuxline#enabled = 1
+    "let g:airline#extensions#tmuxline#enabled = 1
     "let g:airline#extensions#tmuxline#snapshot_file = "~/environment/tmux/statusline-colors.conf"
+
+    " Separator
+    let g:airline_left_sep=''
+    let g:airline_right_sep=''
 " }}}
 
 

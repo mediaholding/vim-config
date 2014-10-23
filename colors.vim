@@ -47,11 +47,13 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 " 256bit terminal
 set t_Co=256
 
-if filereadable(expand('~/.vim/bundle/base16-vim/colors/base16-monokai.vim'))
-  colorscheme base16-monokai
-else
-  colorscheme molokai
-endif
+"if filereadable(expand('~/.vim/bundle/base16-vim/colors/base16-monokai.vim'))
+"  colorscheme base16-monokai
+"else
+"  colorscheme molokai
+"endif
+
+colorscheme molokai
 
 " molokai: for 256 colors
 let g:rehash256 = 1

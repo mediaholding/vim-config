@@ -163,7 +163,7 @@ set smarttab
 
 " Text display settings
 set linebreak
-" set textwidth=80
+set textwidth=120
 set autoindent
 set nowrap
 set whichwrap+=h,l,<,>,[,]
@@ -174,7 +174,7 @@ set nowritebackup
 
 " }}}
 
-set relativenumber 
+" set relativenumber 
 set number
 
 " enables the reading of .vimrc, .exrc and .gvimrc in the current directory.
